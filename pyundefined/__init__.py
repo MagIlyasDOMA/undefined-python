@@ -1,8 +1,8 @@
-__version__ = "1.0.1"
+__version__ = "1.1.0"
 
 
 class UndefinedType(object):
-    """Тип для представления undefined значения"""
+    """A type for representing the undefined value"""
     _instance = None
 
     def __new__(cls):
@@ -13,7 +13,7 @@ class UndefinedType(object):
     def __repr__(self):
         return "undefined"
 
-    # Совместимость Python 2/3 для булевых преобразований
+    # Python 2/3 Compatibility for Boolean Conversions
     def __nonzero__(self):
         return False
 

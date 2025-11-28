@@ -1,16 +1,16 @@
 import os
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name="undefined-python",
-    version="1.0.1",
+    version="1.1.0",
     description="A Python implementation of undefined value similar to JavaScript",
     long_description=open("README.md").read() if os.path.exists("README.md") else "",
     long_description_content_type="text/markdown",
     author="Маг Ильяс DOMA (MagIlyasDOMA)",
     author_email='magilyas.doma.09@list.ru',
     url="https://github.com/MagIlyasDOMA/undefined-python",
-    py_modules=["undefined"],  # Указываем отдельный файл модуля
+    packages=find_packages(),
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
