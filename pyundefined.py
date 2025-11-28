@@ -1,3 +1,6 @@
+__version__ = "1.0.1"
+
+
 class UndefinedType(object):
     """Тип для представления undefined значения"""
     _instance = None
