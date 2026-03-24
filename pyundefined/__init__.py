@@ -7,7 +7,7 @@ class UndefinedType(object):
 
     def __new__(cls):
         if cls._instance is None:
-            cls._instance = super(type(cls), cls).__new__(cls)
+            cls._instance = super(UndefinedType, cls).__new__(cls)
         return cls._instance
 
     def __repr__(self):
