@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="undefined-python",
-    version="1.1.1",
+    version="1.1.0",
     description="A Python implementation of undefined value similar to JavaScript",
     long_description=open("README.md").read() if os.path.exists("README.md") else "",
     long_description_content_type="text/markdown",
