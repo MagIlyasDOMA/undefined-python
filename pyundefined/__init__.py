@@ -1,4 +1,4 @@
-__version__ = "1.1.0"
+__version__ = "1.1.1"
 
 
 class UndefinedType(object):
@@ -7,7 +7,7 @@ class UndefinedType(object):
 
     def __new__(cls):
         if cls._instance is None:
-            cls._instance = super(UndefinedType, cls).__new__(cls)
+            cls._instance = super(type(cls), cls).__new__(cls)
         return cls._instance
 
     def __repr__(self):
@@ -22,9 +22,6 @@ class UndefinedType(object):
 
     def __eq__(self, other):
         return isinstance(other, UndefinedType)
-
-    def __hash__(self):
-        return hash("undefined")
 
 
 undefined = UndefinedType()
