@@ -11,7 +11,7 @@ pip install undefined-python
 ## Usage
 
 ```python
-from undefined import undefined
+from pyundefined import undefined
 
 if some_value is undefined:
     print("Value is undefined")
