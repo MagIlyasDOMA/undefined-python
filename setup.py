@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="undefined-python",
-    version="1.1.0",
+    version="1.2.0",
     description="A Python implementation of undefined value similar to JavaScript",
     long_description=open("README.md").read() if os.path.exists("README.md") else "",
     long_description_content_type="text/markdown",
@@ -34,4 +34,7 @@ setup(
     ],
     python_requires=">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*",
     license="MIT",
+    install_requires=[
+        "typing; python_version < '3.5'",
+    ]
 )

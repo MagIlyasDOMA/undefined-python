@@ -1,3 +1,5 @@
+from typing import TypeVar, Generic, Union
+
 __version__ = "1.1.0"
 
 
@@ -25,3 +27,32 @@ class UndefinedType(object):
 
 
 undefined = UndefinedType()
+
+T = TypeVar("T")
+
+class MaybeUndefined(Generic[T]):
+    def __init__(self, content):
+        # type: (Union[T, UndefinedType]) -> None
+        self.content = content
+
+    def get(self):
+        # type: () -> Union[T, UndefinedType]
+        return self.content
+
+    def set(self, value):
+        # type: (Union[T, UndefinedType]) -> None
+        self.content = value
+
+
+class Nullable(Generic[T]):
+    def __init__(self, content):
+        # type: (Union[T, UndefinedType, None]) -> None
+        self.content = content
+
+    def get(self):
+        # type: () -> Union[T, UndefinedType, None]
+        return self.content
+
+    def set(self, value):
+        # type: (Union[T, UndefinedType, None]) -> None
+        self.content = value
